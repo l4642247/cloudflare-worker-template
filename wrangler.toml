@@ -1,0 +1,28 @@
+# Cloudflare account ID
+name = "cloudflare-worker-template-test"
+compatibility_date = "2024-11-11"
+compatibility_flags = ["nodejs_compat", "nodejs_als"]
+pages_build_output_dir = ".vercel/output/static"
+
+# D1 database binding
+[[d1_databases]]
+binding = "DB"
+database_name = "cloudflare-worker-template-test"
+database_id = "2c44fd74-1a9b-4090-840e-6a8492a55bb2"
+migrations_dir = "migrations"
+
+# R2 bucket binding
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "cloudflare-worker-template-test"
+
+# KV namespace
+[[kv_namespaces]]
+binding = "KV"
+id = "bd661427bda94afbaae5f7d1ede2d1bc"
+
+# Environment variables
+[vars]
+ENVIRONMENT = "test"
+ANALYTICS_SINK = "kv"
+# Configure NEXTAUTH_SECRET via `wrangler secret put NEXTAUTH_SECRET` to keep secrets out of source control

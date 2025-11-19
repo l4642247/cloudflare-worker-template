@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+# Pre-commit hook: only format staged files for improved speed and stability
+# Dependency: lint-staged (installed via pnpm)
+
+pnpm exec lint-staged

@@ -1,0 +1,33 @@
+# Cloudflare account ID
+name = "cloudflare-worker-template-prod"
+compatibility_date = "2024-11-11"
+compatibility_flags = ["nodejs_compat", "nodejs_als"]
+pages_build_output_dir = ".vercel/output/static"
+
+# D1 database binding 
+[[d1_databases]]
+binding = "DB"
+database_name = "cloudflare-worker-template-prod"
+database_id = "3c4840bc-0693-4bac-9317-9a1481643a0f"
+migrations_dir = "migrations"
+
+# R2 bucket binding 
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "cloudflare-worker-template-prod"
+
+# KV namespace
+[[kv_namespaces]]
+binding = "KV"
+id = "d30d6b9759354865add734de8a5b6d1f"
+
+# Environment variables
+[vars]
+ENVIRONMENT = "production"
+ANALYTICS_SINK = "engine"
+# Configure NEXTAUTH_SECRET via `wrangler secret put NEXTAUTH_SECRET` to avoid committing secrets
+
+# Analytics Engine dataset binding
+[[analytics_engine_datasets]]
+binding = "ANALYTICS"
+dataset = "prod_analytics_dataset"  # Use underscore instead of hyphen
