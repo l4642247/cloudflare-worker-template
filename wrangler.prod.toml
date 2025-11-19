@@ -24,10 +24,10 @@ id = "d30d6b9759354865add734de8a5b6d1f"
 # Environment variables
 [vars]
 ENVIRONMENT = "production"
-ANALYTICS_SINK = "engine"
+ANALYTICS_SINK = "kv"  # use KV for analytics in production to avoid requiring Analytics Engine
 # Configure NEXTAUTH_SECRET via `wrangler secret put NEXTAUTH_SECRET` to avoid committing secrets
 
-# Analytics Engine dataset binding
-[[analytics_engine_datasets]]
-binding = "ANALYTICS"
-dataset = "prod_analytics_dataset"  # Use underscore instead of hyphen
+# Analytics Engine dataset binding (disabled; enable only if Analytics Engine is turned on for the account)
+# [[analytics_engine_datasets]]
+# binding = "ANALYTICS"
+# dataset = "prod_analytics_dataset"  # Use underscore instead of hyphen
