@@ -1,5 +1,5 @@
 # Cloudflare account ID
-name = "cloudflare-worker-template-test"
+name = "longtian-next-test"
 compatibility_date = "2024-11-11"
 compatibility_flags = ["nodejs_compat", "nodejs_als"]
 pages_build_output_dir = ".vercel/output/static"

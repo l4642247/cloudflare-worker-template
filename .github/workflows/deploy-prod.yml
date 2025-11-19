@@ -69,7 +69,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy .vercel/output/static --project-name=cloudflare-worker-template-prod --branch=main
+          command: pages deploy .vercel/output/static --project-name=longtian-next-prod --branch=main
 
       - name: Create deployment summary
         run: |
